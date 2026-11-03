@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ruko Pehle — Scam Intelligence & Family Shield</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ui-scale: 1;
+    }
+
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, sans-serif;
+      background: #08060D;
+      color: #F5E6E4;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      font-size: calc(0.95rem * var(--ui-scale));
+      overflow-x: hidden;
+    }
+
+    .font-serif-display {
+      font-family: 'DM Serif Display', 'Noto Sans Devanagari', Georgia, serif;
+    }
+
+    /* Phone Device Mockup Container */
+    .phone-chassis {
+      width: 100%;
+      max-width: 412px;
+      height: 100vh;
+      max-height: 876px;
+      background: #0B0814;
+      border: 9px solid #1A1526;
+      border-radius: 48px;
+      box-shadow: 0 30px 100px -15px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    @media (max-width: 640px) {
+      body { background: #0B0814; }
+      .phone-chassis {
+        max-width: 100%;
+        height: 100vh;
+        max-height: none;
+        border: none;
+        border-radius: 0;
+      }
+    }
+
+    /* Ethereal Glow Mesh Background */
+    .ethereal-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .glow-blob-1 {
+      position: absolute;
+      top: 18%;
+      right: -20%;
+      width: 320px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(224, 76, 76, 0.55) 0%, rgba(243, 159, 90, 0.38) 40%, rgba(69, 25, 82, 0.2) 70%, transparent 100%);
+      filter: blur(55px);
+      border-radius: 50%;
+      animation: pulseGlow 8s ease-in-out infinite alternate;
+    }
+    .glow-blob-2 {
+      position: absolute;
+      bottom: 22%;
+      left: -25%;
+      width: 290px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(174, 68, 90, 0.45) 0%, rgba(69, 25, 82, 0.3) 50%, transparent 75%);
+      filter: blur(50px);
+      border-radius: 50%;
+      animation: pulseGlow 10s ease-in-out infinite alternate-reverse;
+    }
+    .glow-blob-center {
+      position: absolute;
+      top: 40%;
+      left: 15%;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, rgba(243, 159, 90, 0.25) 0%, rgba(102, 37, 73, 0.2) 60%, transparent 100%);
+      filter: blur(45px);
+      border-radius: 50%;
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: scale(0.92) translate(0, 0); opacity: 0.75; }
+      100% { transform: scale(1.1) translate(10px, -15px); opacity: 1; }
+    }
+
+    /* Ultra-Refined Frosted Glass */
+    .glass-card-ethereal {
+      background: rgba(255, 255, 255, 0.055);
+      backdrop-filter: blur(35px);
+      -webkit-backdrop-filter: blur(35px);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+
+    .glass-capsule {
+      background: rgba(255, 255, 255, 0.045);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    }
+    .glass-capsule:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(243, 159, 90, 0.4);
+    }
+
+    .glass-input {
+      background: rgba(12, 9, 22, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #FFFFFF;
+    }
+    .glass-input:focus {
+      border-color: #F39F5A;
+      box-shadow: 0 0 0 2px rgba(243, 159, 90, 0.25);
+      outline: none;
+    }
+
+    .sparkle-icon {
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.85)) drop-shadow(0 0 24px rgba(243, 159, 90, 0.6));
+    }
+
+    .floating-nav {
+      background: rgba(18, 14, 28, 0.75);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-tab-active {
+      color: #FFFFFF !important;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    /* Soundwave */
+    @keyframes soundWave {
+      0%, 100% { height: 4px; }
+      50% { height: 18px; }
+    }
+    .wave-bar {
+      width: 2.5px;
+      background: #F39F5A;
+      border-radius: 9999px;
+      animation: soundWave 1.1s infinite ease-in-out;
+    }
+    .wave-bar:nth-child(2) { animation-delay: 0.15s; }
+    .wave-bar:nth-child(3) { animation-delay: 0.35s; }
+
+    @keyframes modalPop {
+      0% { opacity: 0; transform: scale(0.94) translateY(14px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .animate-modal { animation: modalPop 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- PHONE APP CONTAINER                          -->
+  <!-- ============================================ -->
+  <div class="phone-chassis">
+
+    <!-- Ambient Glowing Ethereal Gradients -->
+    <div class="ethereal-bg">
+      <div class="glow-blob-1"></div>
+      <div class="glow-blob-2"></div>
+      <div class="glow-blob-center"></div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- JS ANIMATED LOADING SCREEN (SPLASH OVERLAY)  -->
+    <!-- ============================================ -->
+    <div id="app-loading-screen" class="absolute inset-0 z-50 bg-[#0A0713] flex flex-col items-center justify-between p-8 transition-opacity duration-700">
+      
+      <div class="w-full flex items-center justify-between text-xs text-white/40 pt-4">
+        <span class="font-mono text-[10px] tracking-wider uppercase">Sarvam AI Core</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-[#F39F5A] animate-ping"></span>
+      </div>
+
+      <div class="flex flex-col items-center text-center space-y-6">
+        <div class="relative w-24 h-24 flex items-center justify-center">
+          <div class="absolute inset-0 bg-gradient-to-tr from-[#AE445A] to-[#F39F5A] rounded-full blur-2xl opacity-60 animate-pulse"></div>
+          
+          <svg class="w-16 h-16 text-white sparkle-icon relative z-10 transition-transform duration-1000" id="loading-star" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/>
+          </svg>
+        </div>
+
+        <div class="space-y-2">
+          <h1 class="text-3xl font-serif-display italic tracking-wide text-white">Ruko Pehle</h1>
+          <p class="text-xs text-[#E8BCB9]/80 font-medium tracking-wide">Pehle Check Karo, Phir Trust Karo</p>
+        </div>
+      </div>
+
+      <div class="w-full space-y-3 pb-6">
+        <div class="w-full h-1 bg-white/10 rounded-full overflow-hidden p-0">
+          <div id="loading-progress-bar" class="h-full bg-gradient-to-r from-[#AE445A] via-[#F39F5A] to-white rounded-full w-0 transition-all duration-300 ease-out"></div>
+        </div>
+        <div class="flex justify-between items-center text-[10px] font-mono text-[#E8BCB9]/60">
+          <span id="loading-status-text">Booting Sarvam-105B Guard...</span>
+          <span id="loading-percent-text">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Phone Status Bar (Dynamic Island) -->
+    <div class="relative z-10 w-full h-11 px-6 flex items-center justify-between text-xs text-[#E8BCB9]/60 shrink-0 select-none pt-1">
+      <span class="font-bold text-white text-[11px] font-mono tracking-tight">9:41</span>
+      
+      <div class="w-24 h-4 rounded-full bg-black/90 border border-white/10 flex items-center justify-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span class="text-[9px] text-[#F39F5A] font-bold tracking-wider font-mono">SHIELD ON</span>
+      </div>
+
+      <div class="flex items-center gap-2 text-[10px] font-mono text-[#E8BCB9]/80 font-semibold">
+        <span>5G</span>
+        <div class="flex items-end gap-0.5 h-2.5">
+          <span class="w-0.5 h-1 bg-white rounded-full"></span>
+          <span class="w-0.5 h-1.5 bg-white rounded-full"></span>
+          <span class="w-0.5 h-2 bg-white rounded-full"></span>
+          <span class="w-0.5 h-2.5 bg-white rounded-full"></span>
+        </div>
+        <div class="w-4 h-2 rounded-sm border border-white/70 p-0.5 flex items-center">
+          <div class="w-full h-full bg-white rounded-2xs"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App Header -->
+    <header class="relative z-10 px-5 py-2.5 flex items-center justify-between shrink-0">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center">
+          <svg class="w-4 h-4 text-[#F39F5A]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="font-serif-display text-lg text-white leading-none tracking-wide" id="brand-app-name">Ruko Pehle</span>
+          <span class="text-[10px] text-[#E8BCB9]/70 block font-normal mt-0.5" id="brand-tagline">Pehle Check Karo, Phir Trust Karo</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1.5">
+        <button onclick="openLanguageModal()" class="px-2.5 py-1 rounded-full glass-capsule text-[11px] font-semibold text-white flex items-center gap-1.5 active:scale-95 transition">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#F39F5A]"></span>
+          <span id="current-lang-pill">English</span>
+        </button>
+
+        <div class="flex items-center glass-capsule rounded-full p-0.5">
+          <button onclick="changeFontSize(-0.1)" title="Smaller text" class="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold hover:bg-white/10 text-white">A–</button>
+          <button onclick="changeFontSize(0.1)" title="Larger text" class="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold hover:bg-[#F39F5A] text-[#F39F5A]">A+</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Scrollable Screen Content Container -->
+    <div class="relative z-10 flex-1 overflow-y-auto px-4 py-2 space-y-4 pb-24">
+
+      <!-- ======================================== -->
+      <!-- TAB 0: NEW SLEEK HOME PAGE               -->
+      <!-- ======================================== -->
+      <div id="screen-home" class="space-y-4">
+        
+        <div class="glass-card-ethereal rounded-3xl p-6 text-center space-y-4 relative overflow-hidden">
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-48 h-48 bg-gradient-to-b from-[#F39F5A]/40 via-[#AE445A]/30 to-transparent blur-3xl pointer-events-none"></div>
+
+          <div class="w-14 h-14 mx-auto flex items-center justify-center relative">
+            <svg class="w-12 h-12 text-white sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/>
+            </svg>
+          </div>
+
+          <div class="space-y-1 relative">
+            <h2 class="text-2xl font-serif-display italic tracking-wide text-white" id="home-hero-title">Doubt before you pay...</h2>
+            <p class="text-xs text-[#E8BCB9]/80 leading-relaxed max-w-xs mx-auto" id="home-hero-subtitle">
+              India loses ₹1,200 Cr monthly to digital arrests & fake KYC alerts. Scan any alert in 3 seconds before acting.
+            </p>
+          </div>
+
+          <button onclick="switchScreen('detector')" class="w-full py-3.5 px-6 rounded-full font-bold text-xs text-white bg-gradient-to-r from-[#E04C4C] via-[#AE445A] to-[#F39F5A] hover:opacity-95 shadow-lg shadow-[#AE445A]/30 active:scale-98 transition flex items-center justify-center gap-2">
+            <span id="home-btn-primary">Scan Suspicious Alert</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="glass-capsule rounded-2xl p-3.5 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-white" id="home-kavach-status-title">Kavach Guardian Active</div>
+              <div class="text-[10px] text-[#E8BCB9]/60" id="home-kavach-status-sub">Linked: Rahul (Son) • +91 98765 43210</div>
+            </div>
+          </div>
+          <button onclick="switchScreen('kavach')" class="text-[10px] font-mono text-[#F39F5A] hover:underline uppercase tracking-wider font-semibold">Edit</button>
+        </div>
+
+        <!-- 3 Feature Capsules -->
+        <div class="space-y-2">
+          <div class="text-[10px] font-mono text-[#E8BCB9]/60 uppercase tracking-wider px-1" id="home-lbl-features">Instant Protection Tools</div>
+
+          <div onclick="switchScreen('detector')" class="glass-capsule rounded-2xl p-3.5 flex items-center justify-between cursor-pointer transition active:scale-98">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#F39F5A]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-white" id="home-feat1-title">Message & Screenshot Check</div>
+                <div class="text-[10px] text-[#E8BCB9]/60" id="home-feat1-desc">Deep scam analysis with Sarvam-105B</div>
+              </div>
+            </div>
+            <svg class="w-4 h-4 text-[#E8BCB9]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <div onclick="switchScreen('academy')" class="glass-capsule rounded-2xl p-3.5 flex items-center justify-between cursor-pointer transition active:scale-98">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-[#F39F5A]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-white" id="home-feat2-title">60-Second Scam Academy</div>
+                <div class="text-[10px] text-[#E8BCB9]/60" id="home-feat2-desc">Build immunity against real fraud templates</div>
+              </div>
+            </div>
+            <svg class="w-4 h-4 text-[#E8BCB9]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <div onclick="switchScreen('emergency')" class="glass-capsule rounded-2xl p-3.5 flex items-center justify-between cursor-pointer transition active:scale-98">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-white" id="home-feat3-title">1930 Cyber Fraud Helpline</div>
+                <div class="text-[10px] text-[#E8BCB9]/60" id="home-feat3-desc">Emergency fund freeze during Golden Hour</div>
+              </div>
+            </div>
+            <svg class="w-4 h-4 text-[#E8BCB9]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ======================================== -->
+      <!-- TAB 1: SCANNER SCREEN                    -->
+      <!-- ======================================== -->
+      <div id="screen-detector" class="space-y-3.5 hidden">
+        
+        <div class="glass-card-ethereal rounded-2xl p-4 space-y-3">
+          
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-[#F39F5A]" id="lbl-scan-heading">Inspect Suspicious Alert</span>
+            <div class="flex gap-1 bg-[#120F24]/80 p-0.5 rounded-lg border border-white/5 text-[11px]">
+              <button onclick="switchInputMode('text')" id="tab-in-text" class="px-2.5 py-0.5 rounded-md font-bold bg-[#AE445A] text-white transition">Text</button>
+              <button onclick="switchInputMode('image')" id="tab-in-image" class="px-2.5 py-0.5 rounded-md font-medium text-[#E8BCB9]/60 transition">Photo</button>
+              <button onclick="switchInputMode('voice')" id="tab-in-voice" class="px-2.5 py-0.5 rounded-md font-medium text-[#E8BCB9]/60 transition">Call</button>
+            </div>
+          </div>
+
+          <!-- Quick Scam Presets -->
+          <div class="space-y-1.5">
+            <span class="text-[10px] text-[#E8BCB9]/60 font-semibold block uppercase tracking-wider" id="lbl-samples-title">Real Scam Scenarios:</span>
+            <div class="grid grid-cols-2 gap-1.5 text-[11px]">
+              <button onclick="loadSample('electricity')" class="p-2 rounded-xl glass-capsule text-left transition flex flex-col gap-0.5">
+                <span class="text-[9px] font-mono font-bold text-[#F39F5A] tracking-wider uppercase">Utility</span>
+                <span class="font-semibold text-white truncate" id="preset-title-elec">Electricity Cutoff</span>
+              </button>
+              <button onclick="loadSample('digital_arrest')" class="p-2 rounded-xl glass-capsule text-left transition flex flex-col gap-0.5">
+                <span class="text-[9px] font-mono font-bold text-rose-400 tracking-wider uppercase">Legal</span>
+                <span class="font-semibold text-white truncate" id="preset-title-arrest">Digital Arrest Call</span>
+              </button>
+              <button onclick="loadSample('sbi_kyc')" class="p-2 rounded-xl glass-capsule text-left transition flex flex-col gap-0.5">
+                <span class="text-[9px] font-mono font-bold text-rose-400 tracking-wider uppercase">Banking</span>
+                <span class="font-semibold text-white truncate" id="preset-title-kyc">Bank KYC Block</span>
+              </button>
+              <button onclick="loadSample('upi_cashback')" class="p-2 rounded-xl glass-capsule text-left transition flex flex-col gap-0.5">
+                <span class="text-[9px] font-mono font-bold text-[#F39F5A] tracking-wider uppercase">UPI</span>
+                <span class="font-semibold text-white truncate" id="preset-title-upi">UPI Collect Bonus</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mode 1: Text -->
+          <div id="mode-text-box">
+            <textarea id="user-input-box" rows="3" class="w-full glass-input rounded-xl p-3 text-xs leading-relaxed resize-none font-mono" placeholder="Paste SMS, WhatsApp message, or link here..."></textarea>
+          </div>
+
+          <!-- Mode 2: Photo / Screenshot -->
+          <div id="mode-image-box" class="hidden">
+            <div onclick="document.getElementById('hidden-photo-input').click()" class="border border-dashed border-white/20 hover:border-[#F39F5A] rounded-xl p-4 text-center cursor-pointer glass-capsule transition">
+              <input type="file" id="hidden-photo-input" class="hidden" accept="image/*" onchange="handlePhotoUpload(event)">
+              <div class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-1.5 text-[#F39F5A]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div class="text-xs font-bold text-white" id="lbl-upload-photo">Upload Screenshot (Doc AI OCR)</div>
+              <div class="text-[10px] text-[#E8BCB9]/60">Fake bills, court orders & bank SMS</div>
+              <div id="photo-loaded-tag" class="hidden mt-1.5 text-[10px] font-bold text-[#F39F5A]">Photo attached</div>
+            </div>
+          </div>
+
+          <!-- Mode 3: Live Microphone Call Scanner (Saarika STT) -->
+          <div id="mode-voice-box" class="hidden text-center p-3 rounded-xl glass-capsule space-y-2 border border-[#F39F5A]/25">
+            <div class="text-[11px] font-bold text-white" id="lbl-mic-speaker">Put call on speaker & press to record</div>
+            <button id="phone-mic-btn" onclick="togglePhoneMic()" class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#662549] via-[#AE445A] to-[#F39F5A] text-white flex items-center justify-center mx-auto shadow-lg shadow-[#AE445A]/30 active:scale-95 transition">
+              <svg id="phone-mic-svg" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
+            </button>
+            <div id="mic-pulse-tag" class="hidden items-center justify-center gap-1.5 text-[11px] font-bold text-[#F39F5A]">
+              <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+              <span>Listening & Transcribing via Saarika STT... (<span id="mic-sec-counter">0:04</span>)</span>
+            </div>
+          </div>
+
+          <!-- Scan Action Button -->
+          <button onclick="analyzeCurrentMessage()" id="btn-scan-action" class="w-full py-3.5 px-4 rounded-full font-bold text-xs text-white bg-gradient-to-r from-[#E04C4C] via-[#AE445A] to-[#F39F5A] hover:opacity-95 shadow-lg shadow-[#AE445A]/30 flex items-center justify-center gap-2 active:scale-98 transition">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span id="btn-scan-text">Check Fraud (Sarvam-105B)</span>
+          </button>
+        </div>
+
+        <!-- Verdict Card -->
+        <div id="verdict-wrapper" class="glass-card-ethereal rounded-2xl p-4 space-y-3">
+          
+          <div class="p-3.5 rounded-xl bg-gradient-to-br from-rose-950/40 via-red-950/30 to-black/60 border border-rose-500/30 text-center space-y-1">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-500/20 border border-rose-500/40 text-rose-300 text-[10px] font-bold tracking-wider uppercase font-mono">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+              High Risk
+            </div>
+            <div class="text-sm font-serif-display italic tracking-wide text-white uppercase pt-0.5" id="res-verdict">
+              ALERT: 100% FRAUD SCAM
+            </div>
+            <div class="text-[11px] font-semibold text-[#F39F5A]" id="res-subtitle">
+              Electricity Bill Phishing Scam
+            </div>
+          </div>
+
+          <!-- Spoken Audio Button (Bulbul TTS Integration) -->
+          <div class="p-2.5 rounded-xl glass-capsule border border-[#F39F5A]/30 flex items-center justify-between gap-2.5">
+            <div class="flex items-center gap-2.5">
+              <button onclick="playSpokenAudio()" id="btn-play-voice" class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#AE445A] to-[#F39F5A] text-[#1D1A39] font-black text-sm flex items-center justify-center shadow transition active:scale-95">
+                <svg id="voice-svg" class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+              </button>
+              <div>
+                <div class="text-xs font-bold text-white flex items-center gap-1">
+                  <span id="lbl-listen-title">Suno (Listen Advice)</span>
+                  <span class="text-[8px] px-1 rounded bg-[#F39F5A]/20 text-[#F39F5A] font-mono font-bold">Bulbul:v3 Voice</span>
+                </div>
+                <div class="text-[10px] text-[#E8BCB9]/70" id="lbl-listen-subtitle">Calm spoken warning for elders</div>
+              </div>
+            </div>
+            
+            <div id="voice-soundwave" class="hidden items-center gap-1 h-4 px-1">
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+              <div class="wave-bar"></div>
+            </div>
+          </div>
+
+          <!-- Red Flags -->
+          <div class="space-y-1.5">
+            <span class="text-[10px] font-bold text-[#F39F5A] uppercase tracking-wider flex items-center gap-1">
+              <span id="lbl-redflags-title">Red Flags Detected:</span>
+            </span>
+            <div class="space-y-1 text-xs text-white/90">
+              <div class="p-2 rounded-lg glass-capsule flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0"></span>
+                <span id="flag-item-1">Fake urgency: "Power disconnected tonight" to trigger panic.</span>
+              </div>
+              <div class="p-2 rounded-lg glass-capsule flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0"></span>
+                <span id="flag-item-2">Personal mobile: Electricity boards never SMS from personal 10-digit numbers.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safe Steps -->
+          <div class="p-2.5 rounded-xl glass-capsule border border-emerald-500/30 space-y-1.5 bg-emerald-950/20 text-xs text-white/90">
+            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1">
+              <span id="lbl-safesteps-title">What To Do Next:</span>
+            </span>
+            <div class="space-y-1 text-[11px]" id="safesteps-box">
+              <div class="flex items-start gap-1.5">
+                <span class="text-emerald-400 font-bold">•</span>
+                <span>Do not call the number or open links.</span>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="text-emerald-400 font-bold">•</span>
+                <span>Verify bill status only on the official state electricity website.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Share Card -->
+          <div class="p-3 rounded-xl glass-capsule border border-emerald-500/30 space-y-2.5 bg-[#0A0713]">
+            <div class="flex items-center justify-between text-[11px] text-emerald-400 font-bold">
+              <span>Family WhatsApp Card</span>
+              <span class="text-[9px] font-mono text-[#E8BCB9]/60">1-TAP FORWARD</span>
+            </div>
+            <p class="text-[11px] leading-relaxed text-[#E8BCB9] font-medium" id="card-preview-text">
+              Attention Family: Electricity disconnection messages are fake scams! Do not call any unknown numbers.
+            </p>
+            <button onclick="shareOnWhatsApp()" class="w-full py-2.5 rounded-full font-bold text-xs text-[#0B0814] bg-gradient-to-r from-emerald-400 to-teal-300 hover:brightness-105 shadow flex items-center justify-center gap-1.5 active:scale-95 transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.09c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.106 8.106 0 01-1.25-4.32c0-4.5 3.66-8.16 8.16-8.16 2.18 0 4.23.85 5.77 2.39a8.125 8.125 0 012.39 5.77c.01 4.5-3.65 8.16-8.08 8.16z"/>
+              </svg>
+              <span id="lbl-wa-share-btn">Forward to Family WhatsApp</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ======================================== -->
+      <!-- TAB 2: KAVACH SHIELD SCREEN              -->
+      <!-- ======================================== -->
+      <div id="screen-kavach" class="space-y-3.5 hidden">
+        <div class="glass-card-ethereal rounded-2xl p-4 space-y-3.5">
+          
+          <div class="flex items-center gap-2.5 border-b border-white/10 pb-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#662549] to-[#F39F5A] text-white flex items-center justify-center shadow">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-sm font-serif-display italic tracking-wide text-white text-base" id="kavach-page-title">Kavach Family Guardian</h2>
+              <p class="text-[10px] text-[#E8BCB9]/70" id="kavach-page-subtitle">Automatic panic alert for your children when fraud is detected</p>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl glass-capsule border border-[#F39F5A]/30 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold text-white flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="kavach-active-tag">Guardian Connected</span>
+              </span>
+              <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold font-mono">ACTIVE</span>
+            </div>
+            <div class="text-xs">
+              <div class="text-[#E8BCB9]/60 text-[10px] uppercase font-bold" id="kavach-lbl-who">Designated Child / Guardian:</div>
+              <div class="text-white font-bold text-sm" id="kavach-display-name">Rahul (Son)</div>
+              <div class="text-[#F39F5A] font-mono text-xs" id="kavach-display-phone">+91 98765 43210</div>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div>
+              <label class="block text-[#E8BCB9] text-[11px] font-semibold mb-1" id="kavach-lbl-inputname">Guardian Name:</label>
+              <input type="text" id="kavach-edit-name" class="w-full glass-input rounded-xl p-2.5 text-xs" value="Rahul (Son)">
+            </div>
+            <div>
+              <label class="block text-[#E8BCB9] text-[11px] font-semibold mb-1" id="kavach-lbl-inputphone">Guardian WhatsApp Number:</label>
+              <input type="tel" id="kavach-edit-phone" class="w-full glass-input rounded-xl p-2.5 text-xs font-mono" value="+91 98765 43210">
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-[#0B0814] border border-white/10 text-[10px] text-[#E8BCB9]/80 leading-relaxed" id="kavach-explainer-box">
+            <strong>How it protects parents:</strong> If your mother/father scans a fake CBI Digital Arrest call or UPI trap, Ruko Pehle immediately prompts a 1-click WhatsApp SOS to you so you can call them before they send money.
+          </div>
+
+          <div class="flex gap-2 pt-1">
+            <button onclick="saveKavach()" class="flex-1 py-2.5 rounded-full font-bold text-xs text-white bg-gradient-to-r from-[#AE445A] to-[#F39F5A] active:scale-95 transition" id="kavach-btn-save">
+              Save Guardian
+            </button>
+            <button onclick="sendTestKavachAlert()" class="py-2.5 px-4 rounded-full font-bold text-xs bg-white/5 border border-white/20 text-[#F39F5A] active:scale-95 transition" id="kavach-btn-test">
+              Test Alert
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ======================================== -->
+      <!-- TAB 3: SCAM QUIZ SCREEN                  -->
+      <!-- ======================================== -->
+      <div id="screen-academy" class="space-y-3.5 hidden">
+        <div class="glass-card-ethereal rounded-2xl p-4 space-y-3.5">
+          
+          <div class="flex items-center justify-between border-b border-white/10 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-[#F39F5A]/20 flex items-center justify-center text-[#F39F5A]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-base font-serif-display italic tracking-wide text-white" id="quiz-header-title">Scam or Real? Daily Quiz</h2>
+                <p class="text-[10px] text-[#E8BCB9]/70" id="quiz-header-sub">60-second scam immunity test</p>
+              </div>
+            </div>
+            <div class="px-2.5 py-1 rounded-full glass-capsule text-[#F39F5A] font-mono text-[11px] font-bold">
+              Score: <span id="quiz-score-val">0</span> / 3
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl glass-capsule space-y-2.5">
+            <div class="flex items-center justify-between text-[11px] font-bold text-[#F39F5A]">
+              <span id="quiz-q-progress">Scenario 1 of 3</span>
+              <span class="text-[#E8BCB9]/60 font-normal" id="quiz-lbl-read">Is this message real or scam?</span>
+            </div>
+            <div class="p-3 rounded-xl bg-[#08060D] border border-white/10 font-mono text-[11px] text-white leading-relaxed" id="quiz-sms-content">
+              "Dear Consumer, Your Electricity power will be disconnected Tonight at 9:30 pm from electricity office. Call officer at 9876543210."
+            </div>
+          </div>
+
+          <div id="quiz-feedback-box" class="hidden p-3 rounded-xl text-[11px] font-semibold"></div>
+
+          <div class="grid grid-cols-2 gap-2" id="quiz-buttons-group">
+            <button onclick="handleQuizPick(true)" class="py-2.5 px-3 rounded-full font-bold text-xs bg-gradient-to-r from-red-600 to-rose-600 text-white flex items-center justify-center gap-1.5 shadow active:scale-95 transition">
+              <span>SCAM (FRAUD)</span>
+            </button>
+            <button onclick="handleQuizPick(false)" class="py-2.5 px-3 rounded-full font-bold text-xs bg-gradient-to-r from-emerald-600 to-teal-600 text-white flex items-center justify-center gap-1.5 shadow active:scale-95 transition">
+              <span>REAL (SAFE)</span>
+            </button>
+          </div>
+
+          <button id="quiz-next-btn" onclick="nextQuizCard()" class="hidden w-full py-2.5 rounded-full font-bold text-xs bg-[#F39F5A] text-[#0B0814] hover:brightness-105 transition flex items-center justify-center gap-1">
+            <span>Next Scenario</span>
+            <span>&rarr;</span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- ======================================== -->
+      <!-- TAB 4: SOS 1930 SCREEN                   -->
+      <!-- ======================================== -->
+      <div id="screen-emergency" class="space-y-3.5 hidden">
+        <div class="glass-card-ethereal rounded-2xl p-4 space-y-3.5">
+          
+          <div class="flex items-center gap-2.5 border-b border-white/10 pb-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-red-600 to-rose-600 text-white flex items-center justify-center shadow">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-base font-serif-display italic tracking-wide text-white" id="sos-header-title">1930 Cyber Fraud Helpline</h2>
+              <p class="text-[10px] text-[#E8BCB9]/70" id="sos-header-subtitle">National Cyber Crime Reporting (Govt of India)</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-gradient-to-br from-red-950/70 to-rose-950/50 border border-red-500/40 text-center space-y-2">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-red-300" id="sos-golden-hour-text">
+              Money deducted in the last 2 hours?
+            </div>
+            <a href="tel:1930" class="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full bg-gradient-to-r from-red-600 to-rose-600 text-white font-bold text-sm shadow-lg shadow-red-600/30 active:scale-95 transition">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <span id="sos-dial-btn">Dial 1930 Toll-Free</span>
+            </a>
+            <p class="text-[10px] text-[#E8BCB9]/80" id="sos-call-explainer">Banks can freeze the fraud transfer during Golden Hours</p>
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="text-[10px] font-bold text-[#F39F5A] uppercase tracking-wider" id="sos-checklist-title">
+              What To Keep Ready Before Calling:
+            </div>
+            <div class="p-2.5 rounded-xl glass-capsule space-y-1.5 text-[11px] text-white/90">
+              <div class="flex items-center gap-2">
+                <span class="text-[#F39F5A] font-bold font-mono">1.</span>
+                <span id="sos-item-1">Bank Name & Account Number</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[#F39F5A] font-bold font-mono">2.</span>
+                <span id="sos-item-2">Transaction ID / UPI Reference (UTR)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[#F39F5A] font-bold font-mono">3.</span>
+                <span id="sos-item-3">Exact Time & Debited Amount</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating Ethereal Navigation Capsule -->
+    <div class="absolute bottom-4 inset-x-4 z-20">
+      <nav class="floating-nav h-14 rounded-full px-2 flex items-center justify-between">
+        
+        <button onclick="switchScreen('home')" id="dock-btn-home" class="flex-1 py-1.5 px-2 rounded-full flex flex-col items-center justify-center gap-0.5 text-[#E8BCB9]/60 nav-tab-active transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          <span class="text-[9px] font-bold tracking-tight" id="dock-lbl-home">Home</span>
+        </button>
+
+        <button onclick="switchScreen('detector')" id="dock-btn-detector" class="flex-1 py-1.5 px-2 rounded-full flex flex-col items-center justify-center gap-0.5 text-[#E8BCB9]/60 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <span class="text-[9px] font-medium tracking-tight" id="dock-lbl-scan">Detector</span>
+        </button>
+
+        <button onclick="switchScreen('kavach')" id="dock-btn-kavach" class="flex-1 py-1.5 px-2 rounded-full flex flex-col items-center justify-center gap-0.5 text-[#E8BCB9]/60 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span class="text-[9px] font-medium tracking-tight" id="dock-lbl-kavach">Kavach</span>
+        </button>
+
+        <button onclick="switchScreen('academy')" id="dock-btn-academy" class="flex-1 py-1.5 px-2 rounded-full flex flex-col items-center justify-center gap-0.5 text-[#E8BCB9]/60 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+          <span class="text-[9px] font-medium tracking-tight" id="dock-lbl-quiz">Quiz</span>
+        </button>
+
+        <button onclick="switchScreen('emergency')" id="dock-btn-emergency" class="flex-1 py-1.5 px-2 rounded-full flex flex-col items-center justify-center gap-0.5 text-[#E8BCB9]/60 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <span class="text-[9px] font-medium tracking-tight" id="dock-lbl-sos">SOS</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- LANGUAGE MODAL (ENG, MAR, HIN ONLY)          -->
+    <!-- ============================================ -->
+    <div id="language-onboarding-modal" class="hidden absolute inset-0 bg-[#06040A]/92 backdrop-blur-2xl z-50 flex items-center justify-center p-5">
+      <div class="glass-card-ethereal w-full max-w-sm rounded-3xl p-6 space-y-4 text-center animate-modal">
+        
+        <div class="w-10 h-10 mx-auto flex items-center justify-center">
+          <svg class="w-8 h-8 text-white sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/>
+          </svg>
+        </div>
+
+        <div class="space-y-1">
+          <h2 class="text-xl font-serif-display italic tracking-wide text-white">Choose Language</h2>
+          <p class="text-[11px] text-[#E8BCB9]/80">Select your preferred language / भाषा निवडा / भाषा चुनें:</p>
+        </div>
+
+        <div class="space-y-2 pt-1 text-xs font-bold">
+          <button onclick="selectAppLanguage('en')" class="w-full p-3 rounded-2xl glass-capsule text-white flex items-center justify-between transition active:scale-98">
+            <span class="text-sm font-semibold">English</span>
+            <span class="text-[10px] font-mono text-[#F39F5A] uppercase tracking-wider">Default</span>
+          </button>
+          
+          <button onclick="selectAppLanguage('hi')" class="w-full p-3 rounded-2xl glass-capsule text-white flex items-center justify-between transition active:scale-98">
+            <span class="text-sm font-semibold">हिन्दी (Hindi)</span>
+            <span class="text-[10px] font-mono text-[#F39F5A] uppercase tracking-wider">National</span>
+          </button>
+
+          <button onclick="selectAppLanguage('mr')" class="w-full p-3 rounded-2xl glass-capsule text-white flex items-center justify-between transition active:scale-98">
+            <span class="text-sm font-semibold">मराठी (Marathi)</span>
+            <span class="text-[10px] font-mono text-[#F39F5A] uppercase tracking-wider">Regional</span>
+          </button>
+        </div>
+
+        <button onclick="closeLanguageModal()" class="w-full py-2.5 text-xs text-[#E8BCB9]/60 hover:text-white transition">Close</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Engine with Live Sarvam Backend Connection -->
+  <script>
+    let appLanguage = 'en';
+    let currentSample = 'electricity';
+    let isSpeaking = false;
+    let isRecordingMic = false;
+    let micInterval = null;
+    let micCount = 0;
+    let currentScale = 1.0;
+    let mediaRecorder = null;
+    let audioChunks = [];
+    let lastBulbulAudioBase64 = null;
+    let activeAudioPlayer = null;
+
+    let guardian = {
+      name: "Rahul (Son)",
+      phone: "+91 98765 43210"
+    };
+
+    // Animated JS Loading Screen Sequence
+    function triggerLoadingScreen(onComplete) {
+      const screen = document.getElementById('app-loading-screen');
+      const bar = document.getElementById('loading-progress-bar');
+      const text = document.getElementById('loading-status-text');
+      const pct = document.getElementById('loading-percent-text');
+      const star = document.getElementById('loading-star');
+
+      screen.style.opacity = '1';
+      screen.style.pointerEvents = 'all';
+
+      let progress = 0;
+      const steps = [
+        { at: 25, label: "Connecting Sarvam-105B Core..." },
+        { at: 60, label: "Calibrating Kavach Shield..." },
+        { at: 85, label: "Loading Bulbul Voice Models..." },
+        { at: 100, label: "Protection Active." }
+      ];
+
+      const interval = setInterval(() => {
+        progress += Math.floor(Math.random() * 8) + 6;
+        if (progress > 100) progress = 100;
+
+        bar.style.width = progress + '%';
+        pct.textContent = progress + '%';
+        star.style.transform = `rotate(${progress * 1.8}deg) scale(${1 + progress / 400})`;
+
+        for (let s of steps) {
+          if (progress >= s.at) text.textContent = s.label;
+        }
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            screen.style.opacity = '0';
+            screen.style.pointerEvents = 'none';
+            if (onComplete) onComplete();
+          }, 450);
+        }
+      }, 70);
+    }
+
+    const quizQuestions = {
+      en: [
+        { text: "Dear Consumer, Electricity will be disconnected tonight at 9:30 pm. Call 9876543210 immediately.", isScam: true, reason: "Power utilities never send disconnection threats from personal 10-digit mobile numbers." },
+        { text: "HDFC Bank: Rs 500 debited from A/C **1234 on 03-Nov. Avail Bal: Rs 14,250. If not you, SMS BLOCK to 56767.", isScam: false, reason: "Legitimate bank notification without suspicious APK download or phishing links." },
+        { text: "PhonePe Reward: You won ₹25,000! Enter UPI PIN to claim money in your account.", isScam: true, reason: "Golden Rule: You NEVER need to enter a UPI PIN to receive money." }
+      ],
+      hi: [
+        { text: "Dear Consumer, बिजली बिल न भरने के कारण आज रात 9:30 बजे बिजली काट दी जाएगी। तुरंत अधिकारी 9876543210 पर कॉल करें।", isScam: true, reason: "बिजली बोर्ड कभी भी पर्सनल मोबाइल नंबर से बिजली काटने की धमकी नहीं देता।" },
+        { text: "HDFC Bank: Rs 500 डेबिट हुआ A/C **1234 से। उपलब्ध बैलेंस: Rs 14,250। यदि आपने नहीं किया, तो 56767 पर SMS BLOCK भेजें।", isScam: false, reason: "असली बैंक SMS है। इसमें कोई फर्जी लिंक या पासवर्ड नहीं मांगा गया है।" },
+        { text: "PhonePe Reward: बधाई! आपने ₹25,000 लॉटरी जीती है। पैसे पाने के लिए अपना UPI PIN डालें।", isScam: true, reason: "पैसे खाते में आने के लिए कभी भी UPI PIN दर्ज नहीं किया जाता!" }
+      ],
+      mr: [
+        { text: "Dear Consumer, मागील महिन्याचे वीज बिल न भरल्याने आज रात्री ९:३० वाजता वीज कापली जाईल. त्वरित ९८७६५४३२१० वर संपर्क करा.", isScam: true, reason: "महावितरण कधीही खाजगी मोबाईल नंबरवरून वीज कापण्याची धमकी देत नाही." },
+        { text: "HDFC Bank: खात्यातून रु. ५०० काढले. शिल्लक: रु. १४,२५०. आपण केले नसल्यास ५६७६७ वर SMS BLOCK पाठवा.", isScam: false, reason: "अधिकृत बँक मेसेज आहे. यात कोणतीही खोटी लिंक नाही." },
+        { text: "PhonePe Reward: अभिनंदन! तुम्हाला ₹२५,००० लॉटरी लागली आहे. पैसे मिळवण्यासाठी आपला UPI PIN टाका.", isScam: true, reason: "पैसे खात्यात येण्यासाठी कधीही UPI PIN टाकावा लागत नाही!" }
+      ]
+    };
+    let quizIndex = 0;
+    let quizScore = 0;
+
+    // Local Dictionary & Offline Scenarios
+    const appDict = {
+      en: {
+        brandName: "Ruko Pehle",
+        tagline: "Pehle Check Karo, Phir Trust Karo",
+        langPill: "English",
+        speechLang: "en-IN",
+        dockHome: "Home",
+        dockScan: "Detector",
+        dockKavach: "Kavach",
+        dockQuiz: "Quiz",
+        dockSos: "SOS",
+        homeHeroTitle: "Doubt before you pay...",
+        homeHeroSub: "India loses ₹1,200 Cr monthly to digital arrests & fake KYC alerts. Scan any alert in 3 seconds before acting.",
+        homeBtnPrimary: "Scan Suspicious Alert",
+        homeKavachTitle: "Kavach Guardian Active",
+        homeKavachSub: "Linked: Rahul (Son) • +91 98765 43210",
+        homeLblFeatures: "Instant Protection Tools",
+        homeFeat1Title: "Message & Screenshot Check",
+        homeFeat1Desc: "Deep scam analysis with Sarvam-105B",
+        homeFeat2Title: "60-Second Scam Academy",
+        homeFeat2Desc: "Build immunity against real fraud templates",
+        homeFeat3Title: "1930 Cyber Fraud Helpline",
+        homeFeat3Desc: "Emergency fund freeze during Golden Hour",
+        scanHeading: "Inspect Suspicious Alert",
+        samplesTitle: "Real Scam Scenarios:",
+        presetElec: "Electricity Cutoff",
+        presetArrest: "Digital Arrest Call",
+        presetKyc: "Bank KYC Block",
+        presetUpi: "UPI Collect Bonus",
+        placeholderText: "Paste SMS, WhatsApp message, or link here...",
+        btnScan: "Check Fraud (Sarvam-105B)",
+        lblListen: "Suno (Listen Advice)",
+        lblListenSub: "Calm spoken warning for elders",
+        lblRedFlags: "Red Flags Detected:",
+        lblSafeSteps: "What To Do Next:",
+        lblWaShare: "Forward to Family WhatsApp",
+        kavachTitle: "Kavach Family Guardian",
+        kavachSubtitle: "Automatic panic alert for your children when fraud is detected",
+        kavachActive: "Guardian Connected",
+        kavachWho: "Designated Child / Guardian:",
+        kavachInputName: "Guardian Name:",
+        kavachInputPhone: "Guardian WhatsApp Number:",
+        kavachExplainer: "How it protects parents: If parents scan a fake CBI Digital Arrest call or UPI trap, Ruko Pehle prompts an immediate 1-click WhatsApp SOS to you so you can call them.",
+        kavachSaveBtn: "Save Guardian",
+        kavachTestBtn: "Test Alert",
+        quizTitle: "Scam or Real? Daily Quiz",
+        quizSub: "60-second scam immunity test",
+        quizReadPrompt: "Is this message real or scam?",
+        sosTitle: "1930 Cyber Fraud Helpline",
+        sosSub: "National Cyber Crime Reporting (Govt of India)",
+        sosGoldenHour: "Money deducted in the last 2 hours?",
+        sosDialBtn: "Dial 1930 Toll-Free",
+        sosCallExplainer: "Banks can freeze fraud transfers during Golden Hours",
+        sosChecklist: "What To Keep Ready Before Calling:",
+        sosItem1: "Bank Name & Account Number",
+        sosItem2: "Transaction ID / UPI Reference (UTR)",
+        sosItem3: "Exact Time & Debited Amount",
+        scams: {
+          electricity: {
+            input: "Dear Consumer, Your Electricity power will be disconnected Tonight at 9:30 pm from electricity office because your previous month bill was not updated. Please immediately contact our electricity officer at 9876543210. Thank you.",
+            verdict: "ALERT: 100% FRAUD SCAM",
+            subtitle: "Electricity Bill Phishing Scam",
+            flags: ["Fake urgency: 'Power disconnected tonight' to trigger panic.", "Personal mobile: Power boards never SMS from personal 10-digit numbers."],
+            steps: ["Do not call the number or open links.", "Verify bill status only on official utility website."],
+            speech: "Please stop and listen. This electricity disconnection message is a fraud. Power offices never send disconnection threats from personal phone numbers. Do not call.",
+            wa: "Attention Family: Electricity disconnection messages are fake scams! Do not call any unknown numbers."
+          },
+          digital_arrest: {
+            input: "[Notice / Call]: This is DCP Crime Branch Mumbai. A courier in your name with narcotics is seized. You are under Digital Arrest. Join WhatsApp video call immediately.",
+            verdict: "DANGER: 'DIGITAL ARREST' EXTORTION",
+            subtitle: "Fake Police / CBI Impersonation",
+            flags: ["There is NO concept of 'Digital Arrest' in Indian law.", "Police never interrogate or arrest suspects over WhatsApp video calls."],
+            steps: ["Hang up the call immediately and block the caller.", "Dial 1930 or visit local police station."],
+            speech: "Warning! Digital Arrest does not exist in Indian law. Real police never conduct interrogations on WhatsApp video calls. Hang up immediately.",
+            wa: "Family Alert: If anyone calls claiming to be Police/CBI threatening Digital Arrest on video call, hang up immediately! It is a fake extortion scam."
+          },
+          sbi_kyc: {
+            input: "SBI Alert: Dear customer, your YONO account is suspended today due to missing Aadhaar KYC. Click here http://bit.ly/sbi-kyc-verify-apk to update.",
+            verdict: "ALERT: FAKE BANK KYC PHISHING",
+            subtitle: "Malicious APK App Download Trap",
+            flags: ["Banks never send shortened links or APK files via SMS.", "Threatening account suspension to force hasty clicks."],
+            steps: ["Do not click the link or install any APK file.", "Verify account status only in official bank app."],
+            speech: "Attention! This is a phishing attack. Banks never send links to download APK apps or update KYC via SMS. Do not click.",
+            wa: "Bank Alert: Messages claiming YONO or bank account suspension with a link are fraudulent. Never click or download unknown APKs."
+          },
+          upi_cashback: {
+            input: "PhonePe Reward: You won ₹25,000 lottery! Enter UPI PIN to claim money in your account.",
+            verdict: "ALERT: UPI COLLECT FRAUD",
+            subtitle: "Money Deduction Collect Trap",
+            flags: ["Golden Rule: You NEVER need to enter a UPI PIN to receive money!", "Entering PIN will instantly deduct money from your account."],
+            steps: ["Decline the collect request in your UPI app.", "Never enter UPI PIN to receive cash."],
+            speech: "Please stop and remember this golden rule: You never need to enter a UPI PIN to receive money. Entering your PIN will deduct money.",
+            wa: "Family Notice: You never need a UPI PIN to receive money. If someone asks for PIN to give cashback, it is 100% fraud!"
+          }
+        }
+      },
+      hi: {
+        brandName: "रुको पहले",
+        tagline: "पहले चेक करो, फिर ट्रस्ट करो",
+        langPill: "हिन्दी",
+        speechLang: "hi-IN",
+        dockHome: "होम",
+        dockScan: "जांचें",
+        dockKavach: "कवच",
+        dockQuiz: "क्विज़",
+        dockSos: "SOS",
+        homeHeroTitle: "पैसे भेजने से पहले रुकें...",
+        homeHeroSub: "भारत में हर महीने ₹1,200 करोड़ की ठगी डिजिटल अरेस्ट और फर्जी KYC से होती है। कोई भी कदम उठाने से पहले सिर्फ 3 सेकंड में जांचें।",
+        homeBtnPrimary: "संदिग्ध अलर्ट जांचें",
+        homeKavachTitle: "कवच सुरक्षा सक्रिय है",
+        homeKavachSub: "अभिभावक: राहुल (बेटा) • +91 98765 43210",
+        homeLblFeatures: "सुरक्षा टूल्स",
+        homeFeat1Title: "मैसेज व फोटो की जांच",
+        homeFeat1Desc: "Sarvam-105B से डीप फ्रॉड एनालिसिस",
+        homeFeat2Title: "60-सेकंड साइबर स्कूल",
+        homeFeat2Desc: "असली ठगी के मैसेज पहचानना सीखें",
+        homeFeat3Title: "1930 साइबर हेल्पलाइन",
+        homeFeat3Desc: "पैसे कटने पर गोल्डन ऑवर में बैंक फ्रीज",
+        scanHeading: "संदिग्ध मैसेज या कॉल जांचें",
+        samplesTitle: "अक्सर होने वाले फ्रॉड:",
+        presetElec: "बिजली बिल धमकी",
+        presetArrest: "डिजिटल अरेस्ट कॉल",
+        presetKyc: "बैंक KYC ब्लॉक",
+        presetUpi: "UPI कैशबैक लॉटरी",
+        placeholderText: "संदेश, व्हाट्सएप मैसेज या लिंक यहाँ पेस्ट करें...",
+        btnScan: "जांचें — क्या यह फ्रॉड है? (Sarvam-105B)",
+        lblListen: "सुनिए (Listen Advice)",
+        lblListenSub: "बुजुर्गों के लिए सरल भाषा में आवाज़",
+        lblRedFlags: "पहचाने गए खतरे:",
+        lblSafeSteps: "अब आपको क्या करना है:",
+        lblWaShare: "फैमिली व्हाट्सएप पर भेजें",
+        kavachTitle: "कवच फॅमिली गार्जियन",
+        kavachSubtitle: "फ्रॉड का अंदेशा होते ही बच्चों को ऑटोमैटिक अलर्ट",
+        kavachActive: "कवच सुरक्षा सक्रिय है",
+        kavachWho: "सुरक्षा अभिभावक (बेटा / बेटी):",
+        kavachInputName: "अभिभावक का नाम:",
+        kavachInputPhone: "अभिभावक का व्हाट्सएप नंबर:",
+        kavachExplainer: "माता-पिता की सुरक्षा: यदि माता-पिता को डिजिटल अरेस्ट या बैंक फ्रॉड का कॉल आए, तो रुको पहले तुरंत आपको व्हाट्सएप अलर्ट भेजेगा ताकि आप उन्हें कॉल करके रोक सकें।",
+        kavachSaveBtn: "सुरक्षित करें",
+        kavachTestBtn: "टेस्ट अलर्ट भेजें",
+        quizTitle: "Scam या Asli? साइबर क्विज़",
+        quizSub: "60 सेकंड में पहचानें फर्जी संदेश",
+        quizReadPrompt: "क्या यह मैसेज असली है या फ्रॉड?",
+        sosTitle: "1930 साइबर हेल्पलाइन",
+        sosSub: "राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल (भारत सरकार)",
+        sosGoldenHour: "पिछले 2 घंटे में पैसे कटे हैं?",
+        sosDialBtn: "1930 टोल-फ्री डायल करें",
+        sosCallExplainer: "गोल्डन ऑवर में बैंक फ्रॉड ट्रांसफर को तुरंत फ्रीज कर सकता है",
+        sosChecklist: "कॉल करने से पहले तैयार रखें:",
+        sosItem1: "बैंक का नाम और खाता संख्या",
+        sosItem2: "ट्रांजेक्शन UTR नंबर या संदर्भ संख्या",
+        sosItem3: "पैसे कटने का सही समय और राशि",
+        scams: {
+          electricity: {
+            input: "Dear Consumer, बिजली बिल न भरने के कारण आज रात 9:30 बजे बिजली काट दी जाएगी। तुरंत अधिकारी 9876543210 पर कॉल करें।",
+            verdict: "सावधान: यह 100% फ्रॉड है",
+            subtitle: "बिजली बिल के नाम पर धोखाधड़ी",
+            flags: ["झूठी जल्दी: 'आज रात बिजली कटेगी' कहकर डराना।", "निजी नंबर: बिजली विभाग कभी 10 अंकों के व्यक्तिगत नंबर से मैसेज नहीं भेजता।"],
+            steps: ["दिए गए नंबर पर कॉल न करें।", "बिल की स्थिति सिर्फ आधिकारिक वेबसाइट पर जांचें।"],
+            speech: "रुकिए और सुनिए। यह बिजली बिल का मैसेज पूरी तरह से फर्जी है। बिजली विभाग कभी भी व्यक्तिगत नंबर से बिजली काटने की धमकी नहीं देता। फोन न करें।",
+            wa: "परिवार ध्यान दें: आज रात बिजली कटने वाले मैसेज फर्जी हैं। किसी अज्ञात नंबर पर कॉल न करें।"
+          },
+          digital_arrest: {
+            input: "[Notice / Call]: This is DCP Crime Branch Mumbai. A courier in your name with narcotics is seized. You are under Digital Arrest. Join WhatsApp video call immediately.",
+            verdict: "खतरा: 'डिजिटल अरेस्ट' जबरन वसूली",
+            subtitle: "फर्जी पुलिस / CBI बनकर ठगी",
+            flags: ["भारतीय कानून में 'डिजिटल अरेस्ट' जैसा कोई प्रावधान नहीं है।", "पुलिस कभी भी व्हाट्सएप वीडियो कॉल पर पूछताछ या अरेस्ट नहीं करती।"],
+            steps: ["कॉल तुरंत काटें और नंबर ब्लॉक करें।", "1930 पर शिकायत दर्ज करें।"],
+            speech: "सावधान! डिजिटल अरेस्ट नाम की कोई चीज भारतीय कानून में नहीं है। असली पुलिस कभी वीडियो कॉल पर अरेस्ट नहीं करती। तुरंत फोन काटें।",
+            wa: "फैमिली अलर्ट: अगर कोई पुलिस या CBI बनकर वीडियो कॉल पर डिजिटल अरेस्ट की धमकी दे, तो तुरंत फोन काटें। यह ठगी है।"
+          },
+          sbi_kyc: {
+            input: "SBI Alert: Dear customer, your YONO account is suspended today due to missing Aadhaar KYC. Click here http://bit.ly/sbi-kyc-verify-apk to update.",
+            verdict: "सावधान: फर्जी बैंक KYC लिंक",
+            subtitle: "खाता खाली करने वाली APK फाइल",
+            flags: ["बैंक कभी भी SMS में APK फाइल या अज्ञात लिंक नहीं भेजते।", "अकाउंट ब्लॉक होने का डर दिखाकर जल्दी में क्लिक करवाना।"],
+            steps: ["लिंक पर क्लिक न करें और न ही कोई ऐप डाउनलोड करें।", "खाते की स्थिति केवल आधिकारिक बैंक ऐप में देखें।"],
+            speech: "ध्यान दें! यह एक फिशिंग हमला है। बैंक कभी भी SMS में ऐप डाउनलोड करने या KYC करने का लिंक नहीं भेजते। क्लिक न करें।",
+            wa: "बैंक अलर्ट: बैंक अकाउंट ब्लॉक होने का झांसा देने वाले लिंक फर्जी हैं। कोई भी अज्ञात ऐप डाउनलोड न करें।"
+          },
+          upi_cashback: {
+            input: "PhonePe Reward: You won ₹25,000 lottery! Enter UPI PIN to claim money in your account.",
+            verdict: "सावधान: UPI कलेक्ट फ्रॉड",
+            subtitle: "पैसे निकालने का जाल",
+            flags: ["सुनहरा नियम: पैसे प्राप्त करने के लिए कभी भी UPI PIN नहीं डालना पड़ता!", "पिन डालने पर आपके खाते से पैसे कट जाएंगे।"],
+            steps: ["UPI ऐप में कलेक्ट रिक्वेस्ट को Decline करें।", "पैसे पाने के लिए कभी भी पिन न डालें।"],
+            speech: "रुकिए और यह सुनहरा नियम याद रखिए: पैसे लेने के लिए कभी UPI PIN नहीं डालना पड़ता। पिन डालने से आपके पैसे कट जाएंगे।",
+            wa: "फैमिली नोटिस: पैसे प्राप्त करने के लिए कभी UPI पिन नहीं डालना होता। यदि कोई पिन मांगे, तो वह 100% फ्रॉड है।"
+          }
+        }
+      },
+      mr: {
+        brandName: "रुको पहले",
+        tagline: "पहले चेक करो, फिर ट्रस्ट करो",
+        langPill: "मराठी",
+        speechLang: "mr-IN",
+        dockHome: "होम",
+        dockScan: "तपासा",
+        dockKavach: "कवच",
+        dockQuiz: "क्विझ",
+        dockSos: "SOS",
+        homeHeroTitle: "पैसे पाठवण्यापूर्वी थांबा...",
+        homeHeroSub: "भारतात दरमहा ₹१,२०० कोटींची फसवणूक डिजिटल अरेस्ट आणि बनावट KYC मुळे होते. पैसे पाठवण्यापूर्वी फक्त ३ सेकंदात तपासा.",
+        homeBtnPrimary: "संशयास्पद मेसेज तपासा",
+        homeKavachTitle: "कवच सुरक्षा सक्रिय आहे",
+        homeKavachSub: "पालक: राहुल (मुलगा) • +91 98765 43210",
+        homeLblFeatures: "सुरक्षा साधने",
+        homeFeat1Title: "मेसेज आणि फोटो तपासणी",
+        homeFeat1Desc: "Sarvam-105B द्वारे अचूक फसवणूक विश्लेषण",
+        homeFeat2Title: "६० सेकंद सायबर शाळा",
+        homeFeat2Desc: "खोटे मेसेज लगेच ओळखायला शिका",
+        homeFeat3Title: "१९३० सायबर हेल्पलाइन",
+        homeFeat3Desc: "पैसे कापले गेल्यास तात्काळ बँक ट्रान्सफर थांबवा",
+        scanHeading: "संशयास्पद मेसेज किंवा कॉल तपासा",
+        samplesTitle: "वारंवार होणारे फ्रॉड:",
+        presetElec: "वीज बिल धमकी",
+        presetArrest: "डिजिटल अरेस्ट कॉल",
+        presetKyc: "बँक KYC ब्लॉक",
+        presetUpi: "UPI कॅशबॅक लॉटरी",
+        placeholderText: "संदेश, व्हॉट्सअ‍ॅप मेसेज किंवा लिंक इथे पेस्ट करा...",
+        btnScan: "तपासा — ही फसवणूक आहे का? (Sarvam-105B)",
+        lblListen: "ऐका (Listen Advice)",
+        lblListenSub: "ज्येष्ठ नागरिकांसाठी स्पष्ट आवाजात सल्ला",
+        lblRedFlags: "धोक्याच्या खुणा:",
+        lblSafeSteps: "आता काय करावे:",
+        lblWaShare: "कुटुंबाच्या व्हॉट्सअ‍ॅपवर पाठवा",
+        kavachTitle: "कवच फॅमिली गार्डियन",
+        kavachSubtitle: "फसवणूक आढळल्यास मुलांना तत्काळ ऑटोमॅटिक अलर्ट",
+        kavachActive: "कवच सुरक्षा सक्रिय आहे",
+        kavachWho: "सुरक्षा पालक (मुलगा / मुलगी):",
+        kavachInputName: "पालकांचे नाव:",
+        kavachInputPhone: "पालकांचा व्हॉट्सअ‍ॅप नंबर:",
+        kavachExplainer: "पालकांची सुरक्षा: आई-वडिलांना डिजिटल अरेस्ट किंवा बँक फ्रॉडचा कॉल आल्यास, रुको पहले त्वरित तुम्हाला व्हॉट्सअ‍ॅप अलर्ट पाठवेल जेणेकरून तुम्ही त्यांना तत्काळ कॉल करू शकता.",
+        kavachSaveBtn: "पालक सेव्ह करा",
+        kavachTestBtn: "टेस्ट अलर्ट पाठवा",
+        quizTitle: "Scam की Asli? सायबर शाळा",
+        quizSub: "६० सेकंदात ओळखा खोटे मेसेज",
+        quizReadPrompt: "हा मेसेज खरा आहे की फसवणूक?",
+        sosTitle: "१९३० सायबर हेल्पलाइन",
+        sosSub: "राष्ट्रीय सायबर गुन्हे नोंदणी पोर्टल (भारत सरकार)",
+        sosGoldenHour: "मागील २ तासांत पैसे कट झाले?",
+        sosDialBtn: "१९३० टोल-फ्री डायल करा",
+        sosCallExplainer: "गोल्डन अव्हरमध्ये बँक ट्रान्सफर तात्काळ थांबवता येते",
+        sosChecklist: "कॉल करण्यापूर्वी तयार ठेवा:",
+        sosItem1: "बँकेचे नाव आणि खाते क्रमांक",
+        sosItem2: "व्यवहार UTR क्रमांक / आयडी",
+        sosItem3: "पैसे कापल्याची अचूक वेळ आणि रक्कम",
+        scams: {
+          electricity: {
+            input: "Dear Consumer, मागील महिन्याचे वीज बिल न भरल्याने आज रात्री ९:३० वाजता वीज कापली जाईल. त्वरित ९८७६५४३२१० वर संपर्क करा.",
+            verdict: "सावधान: ही १००% फसवणूक आहे",
+            subtitle: "महावितरणच्या नावाने वीज बिल फ्रॉड",
+            flags: ["खोटी घाई: 'आज रात्री ९:३० वाजता वीज कट होईल' अशी भीती दाखवणे.", "खाजगी फोन: महावितरण कधीही वैयक्तिक मोबाईल क्रमांकावरून मेसेज पाठवत नाही."],
+            steps: ["दिलेल्या नंबरवर फोन करू नका.", "महावितरणच्या अधिकृत वेबसाइट किंवा अ‍ॅपवरच तुमचे बिल तपासा."],
+            speech: "आधी थांबा आणि ऐका! हा वीज बिलाचा मेसेज पूर्णपणे खोटा आहे. महावितरण कधीही रात्री वीज तोडण्याची धमकी देत नाही. घाबरू नका.",
+            wa: "घरातल्या सर्वांनी लक्ष द्या: आज रात्री वीज कापली जाईल असा मेसेज आल्यास घाबरू नका. ही ऑनलाईन फसवणूक आहे. कोणालाही पैसे पाठवू नका."
+          },
+          digital_arrest: {
+            input: "[Notice / Call]: This is DCP Crime Branch Mumbai. A courier in your name with narcotics is seized. You are under Digital Arrest. Join WhatsApp video call immediately.",
+            verdict: "धोका: 'डिजिटल अरेस्ट' खंडणी",
+            subtitle: "पोलीस/CBI च्या नावाने फसवणूक",
+            flags: ["भारतीय कायद्यामध्ये 'डिजिटल अरेस्ट' असा कोणताच प्रकार नाही!", "पोलीस कधीही व्हॉट्सअ‍ॅप व्हिडिओ कॉलवर अटक करत नाहीत."],
+            steps: ["त्वरित कॉल कट करा आणि तो नंबर ब्लॉक करा.", "घाबरू नका, १९३० सायबर सेलवर त्वरित माहिती कळवा."],
+            speech: "आधी थांबा! डिजिटल अरेस्ट ही पूर्णपणे खोटी धमकी आहे. पोलीस कधीही व्हिडिओ कॉलवर अटक करत नाहीत. लगेच फोन कट करा.",
+            wa: "फॅमिली अलर्ट: पोलीस किंवा सीबीआय अधिकारी बनून जर कोणी फोन केला आणि डिजिटल अरेस्टची धमकी दिली, तर फोन लगेच कट करा. हा फ्रॉड आहे."
+          },
+          sbi_kyc: {
+            input: "SBI Alert: Dear customer, your YONO account is suspended today due to missing Aadhaar KYC. Click here http://bit.ly/sbi-kyc-verify-apk to update.",
+            verdict: "सावधान: खोटा बँक KYC मेसेज",
+            subtitle: "बँक खाते रिकामे करणारी APK लिंक",
+            flags: ["बँक कधीही APK फाईल किंवा संशयास्पद लिंक पाठवून माहिती मागत नाही.", "अकाउंट बंद होण्याची भीती दाखवून घाई करणे."],
+            steps: ["लिंकवर अजिबात क्लिक करू नका.", "आपला बँक पिन, ओटीपी किंवा पासवर्ड कोणाशीही शेअर करू नका."],
+            speech: "लक्ष द्या! बँक कधीही एसएमएस द्वारे केवायसी अपडेट करायला सांगत नाही. या लिंकवर अजिबात क्लिक करू नका.",
+            wa: "घरातल्या सर्वांनी सावध राहा: एसबीआय किंवा इतर बँकेचे केवायसी अपडेट करा असा कोणताही लिंक असलेला मेसेज आल्यास तात्काळ डिलीट करा."
+          },
+          upi_cashback: {
+            input: "PhonePe Reward: You won ₹25,000 lottery! Enter UPI PIN to claim money in your account.",
+            verdict: "धोका: यूपीआय कॅशबॅक फसवणूक",
+            subtitle: "पैसे कापण्याची चाल",
+            flags: ["सुवर्ण नियम: खात्यात पैसे येण्यासाठी कधीही UPI PIN टाकावा लागत नाही!", "पिन टाकला तर खात्यातून पैसे कट होतील."],
+            steps: ["कलेक्ट रिक्वेस्ट लगेच Decline करा.", "पैसे मिळवण्यासाठी कधीही आपला यूपीआय पिन टाकू नका."],
+            speech: "थांबा आणि लक्षात ठेवा! खात्यात पैसे येण्यासाठी कधीही यूपीआय पिन टाकावा लागत नाही. पिन टाकला तर तुमचेच पैसे कट होतील.",
+            wa: "सर्वांनी काळजी घ्या: पैसे मिळण्यासाठी कधीही यूपीआय पिन टाकावा लागत नाही. कोणीही असे सांगितल्यास ते सरळ खोटे आहे."
+          }
+        }
+      }
+    };
+
+    function selectAppLanguage(lang) {
+      appLanguage = (lang === 'mr' || lang === 'hi' || lang === 'en') ? lang : 'en';
+      closeLanguageModal();
+      triggerLoadingScreen(() => {
+        applyLanguage(appLanguage);
+      });
+    }
+
+    function openLanguageModal() {
+      document.getElementById('language-onboarding-modal').classList.remove('hidden');
+    }
+
+    function closeLanguageModal() {
+      document.getElementById('language-onboarding-modal').classList.add('hidden');
+    }
+
+    function applyLanguage(lang) {
+      const d = appDict[lang] || appDict['en'];
+      
+      document.getElementById('brand-app-name').textContent = d.brandName;
+      document.getElementById('brand-tagline').textContent = d.tagline;
+      document.getElementById('current-lang-pill').textContent = d.langPill;
+
+      document.getElementById('dock-lbl-home').textContent = d.dockHome;
+      document.getElementById('dock-lbl-scan').textContent = d.dockScan;
+      document.getElementById('dock-lbl-kavach').textContent = d.dockKavach;
+      document.getElementById('dock-lbl-quiz').textContent = d.dockQuiz;
+      document.getElementById('dock-lbl-sos').textContent = d.dockSos;
+
+      document.getElementById('home-hero-title').textContent = d.homeHeroTitle;
+      document.getElementById('home-hero-subtitle').textContent = d.homeHeroSub;
+      document.getElementById('home-btn-primary').textContent = d.homeBtnPrimary;
+      document.getElementById('home-kavach-status-title').textContent = d.homeKavachTitle;
+      document.getElementById('home-kavach-status-sub').textContent = d.homeKavachSub;
+      document.getElementById('home-lbl-features').textContent = d.homeLblFeatures;
+      document.getElementById('home-feat1-title').textContent = d.homeFeat1Title;
+      document.getElementById('home-feat1-desc').textContent = d.homeFeat1Desc;
+      document.getElementById('home-feat2-title').textContent = d.homeFeat2Title;
+      document.getElementById('home-feat2-desc').textContent = d.homeFeat2Desc;
+      document.getElementById('home-feat3-title').textContent = d.homeFeat3Title;
+      document.getElementById('home-feat3-desc').textContent = d.homeFeat3Desc;
+
+      document.getElementById('lbl-scan-heading').textContent = d.scanHeading;
+      document.getElementById('lbl-samples-title').textContent = d.samplesTitle;
+      document.getElementById('preset-title-elec').textContent = d.presetElec;
+      document.getElementById('preset-title-arrest').textContent = d.presetArrest;
+      document.getElementById('preset-title-kyc').textContent = d.presetKyc;
+      document.getElementById('preset-title-upi').textContent = d.presetUpi;
+      document.getElementById('user-input-box').placeholder = d.placeholderText;
+      document.getElementById('btn-scan-text').textContent = d.btnScan;
+      document.getElementById('lbl-listen-title').textContent = d.lblListen;
+      document.getElementById('lbl-listen-subtitle').textContent = d.lblListenSub;
+      document.getElementById('lbl-redflags-title').textContent = d.lblRedFlags;
+      document.getElementById('lbl-safesteps-title').textContent = d.lblSafeSteps;
+      document.getElementById('lbl-wa-share-btn').textContent = d.lblWaShare;
+
+      document.getElementById('kavach-page-title').textContent = d.kavachTitle;
+      document.getElementById('kavach-page-subtitle').textContent = d.kavachSubtitle;
+      document.getElementById('kavach-active-tag').textContent = d.kavachActive;
+      document.getElementById('kavach-lbl-who').textContent = d.kavachWho;
+      document.getElementById('kavach-lbl-inputname').textContent = d.kavachInputName;
+      document.getElementById('kavach-lbl-inputphone').textContent = d.kavachInputPhone;
+      document.getElementById('kavach-explainer-box').innerHTML = d.kavachExplainer;
+      document.getElementById('kavach-btn-save').textContent = d.kavachSaveBtn;
+      document.getElementById('kavach-btn-test').textContent = d.kavachTestBtn;
+
+      document.getElementById('quiz-header-title').textContent = d.quizTitle;
+      document.getElementById('quiz-header-sub').textContent = d.quizSub;
+      document.getElementById('quiz-lbl-read').textContent = d.quizReadPrompt;
+
+      document.getElementById('sos-header-title').textContent = d.sosTitle;
+      document.getElementById('sos-header-subtitle').textContent = d.sosSub;
+      document.getElementById('sos-golden-hour-text').textContent = d.sosGoldenHour;
+      document.getElementById('sos-dial-btn').textContent = d.sosDialBtn;
+      document.getElementById('sos-call-explainer').textContent = d.sosCallExplainer;
+      document.getElementById('sos-checklist-title').textContent = d.sosChecklist;
+      document.getElementById('sos-item-1').textContent = d.sosItem1;
+      document.getElementById('sos-item-2').textContent = d.sosItem2;
+      document.getElementById('sos-item-3').textContent = d.sosItem3;
+
+      renderSampleData();
+      renderQuizCard();
+    }
+
+    function switchScreen(screenName) {
+      const screens = ['home', 'detector', 'kavach', 'academy', 'emergency'];
+      screens.forEach(s => {
+        const el = document.getElementById('screen-' + s);
+        const btn = document.getElementById('dock-btn-' + s);
+        if (s === screenName) {
+          el.classList.remove('hidden');
+          btn.classList.add('nav-tab-active');
+          btn.querySelector('span').classList.add('font-bold');
+        } else {
+          el.classList.add('hidden');
+          btn.classList.remove('nav-tab-active');
+          btn.querySelector('span').classList.remove('font-bold');
+        }
+      });
+    }
+
+    function switchInputMode(m) {
+      ['text', 'image', 'voice'].forEach(type => {
+        document.getElementById('mode-' + type + '-box').classList.add('hidden');
+        const b = document.getElementById('tab-in-' + type);
+        b.className = "px-2.5 py-0.5 rounded-md font-medium text-[#E8BCB9]/60 transition";
+      });
+      document.getElementById('mode-' + m + '-box').classList.remove('hidden');
+      const activeBtn = document.getElementById('tab-in-' + m);
+      activeBtn.className = "px-2.5 py-0.5 rounded-md font-bold bg-[#AE445A] text-white transition";
+    }
+
+    function changeFontSize(delta) {
+      currentScale = Math.min(1.35, Math.max(0.85, currentScale + delta));
+      document.documentElement.style.setProperty('--ui-scale', currentScale);
+    }
+
+    function loadSample(type) {
+      currentSample = type;
+      switchInputMode('text');
+      renderSampleData();
+      analyzeCurrentMessage();
+    }
+
+    function renderSampleData() {
+      const d = appDict[appLanguage] || appDict['en'];
+      const data = d.scams[currentSample];
+
+      document.getElementById('user-input-box').value = data.input;
+      document.getElementById('res-verdict').textContent = data.verdict;
+      document.getElementById('res-subtitle').textContent = data.subtitle;
+
+      document.getElementById('flag-item-1').textContent = data.flags[0];
+      document.getElementById('flag-item-2').textContent = data.flags[1];
+
+      const stepsBox = document.getElementById('safesteps-box');
+      stepsBox.innerHTML = data.steps.map(s => `<div class="flex items-start gap-1.5"><span class="text-emerald-400 font-bold">•</span><span>${s}</span></div>`).join('');
+
+      document.getElementById('card-preview-text').textContent = data.wa;
+    }
+
+    // REAL SARVAM-105B BACKEND ANALYZE INTEGRATION
+    async function analyzeCurrentMessage() {
+      const text = document.getElementById('user-input-box').value.trim();
+      if (!text) return;
+
+      const btn = document.getElementById('btn-scan-action');
+      const txt = document.getElementById('btn-scan-text');
+      const orig = txt.textContent;
+
+      btn.disabled = true;
+      txt.textContent = "Analyzing with Sarvam-105B...";
+
+      try {
+        const response = await fetch('/api/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, language: appLanguage })
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success && data.analysis) {
+            const res = data.analysis;
+            document.getElementById('res-verdict').textContent = res.verdict || "SCAM DETECTED";
+            document.getElementById('res-subtitle').textContent = res.title || res.category || "Fraud Alert";
+
+            if (res.redFlags && res.redFlags.length) {
+              document.getElementById('flag-item-1').textContent = res.redFlags[0] || "";
+              document.getElementById('flag-item-2').textContent = res.redFlags[1] || "";
+            }
+
+            if (res.whatToDoNext && res.whatToDoNext.length) {
+              const stepsBox = document.getElementById('safesteps-box');
+              stepsBox.innerHTML = res.whatToDoNext.map(s => `<div class="flex items-start gap-1.5"><span class="text-emerald-400 font-bold">•</span><span>${s}</span></div>`).join('');
+            }
+
+            if (res.whatsAppFamilyCard) {
+              document.getElementById('card-preview-text').textContent = res.whatsAppFamilyCard;
+            }
+
+            // Save high-fidelity Bulbul TTS audio from Sarvam
+            if (data.audioBase64) {
+              lastBulbulAudioBase64 = data.audioBase64;
+            }
+          }
+        } else {
+          renderSampleData();
+        }
+      } catch (err) {
+        console.warn("Backend offline or local preview, using scenario engine:", err);
+        renderSampleData();
+      } finally {
+        btn.disabled = false;
+        txt.textContent = orig;
+
+        const v = document.getElementById('verdict-wrapper');
+        v.classList.add('ring-2', 'ring-[#F39F5A]/40');
+        setTimeout(() => v.classList.remove('ring-2', 'ring-[#F39F5A]/40'), 1000);
+      }
+    }
+
+    // REAL BULBUL:V3 TTS AUDIO PLAYBACK
+    function playSpokenAudio() {
+      if (isSpeaking) {
+        if (activeAudioPlayer) {
+          activeAudioPlayer.pause();
+          activeAudioPlayer.currentTime = 0;
+        }
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        isSpeaking = false;
+        updateAudioState(false);
+        return;
+      }
+
+      // If Bulbul TTS base64 is available from Sarvam backend
+      if (lastBulbulAudioBase64) {
+        try {
+          activeAudioPlayer = new Audio("data:audio/wav;base64," + lastBulbulAudioBase64);
+          isSpeaking = true;
+          updateAudioState(true);
+
+          activeAudioPlayer.onended = () => { isSpeaking = false; updateAudioState(false); };
+          activeAudioPlayer.onerror = () => { isSpeaking = false; updateAudioState(false); };
+          activeAudioPlayer.play();
+          return;
+        } catch (e) {
+          console.warn("HTML5 audio playback error, falling back:", e);
+        }
+      }
+
+      // Fallback: Browser Web Speech API
+      if ('speechSynthesis' in window) {
+        const d = appDict[appLanguage] || appDict['en'];
+        const text = d.scams[currentSample].speech;
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = d.speechLang || 'en-IN';
+        utterance.rate = 0.88;
+
+        utterance.onstart = () => { isSpeaking = true; updateAudioState(true); };
+        utterance.onend = () => { isSpeaking = false; updateAudioState(false); };
+        utterance.onerror = () => { isSpeaking = false; updateAudioState(false); };
+
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    function updateAudioState(on) {
+      const svg = document.getElementById('voice-svg');
+      const wave = document.getElementById('voice-soundwave');
+      if (on) {
+        svg.innerHTML = '<path d="M6 6h12v12H6z"/>';
+        wave.classList.remove('hidden');
+        wave.classList.add('flex');
+      } else {
+        svg.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+        wave.classList.add('hidden');
+        wave.classList.remove('flex');
+      }
+    }
+
+    // REAL SAARIKA SPEECH-TO-TEXT RECORDING
+    async function togglePhoneMic() {
+      const svg = document.getElementById('phone-mic-svg');
+      const pulse = document.getElementById('mic-pulse-tag');
+      const counter = document.getElementById('mic-sec-counter');
+
+      if (!isRecordingMic) {
+        isRecordingMic = true;
+        svg.innerHTML = '<rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/>';
+        pulse.classList.remove('hidden');
+        pulse.classList.add('flex');
+
+        micCount = 0;
+        audioChunks = [];
+
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          mediaRecorder = new MediaRecorder(stream);
+          mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+          mediaRecorder.start();
+        } catch (e) {
+          console.warn("MediaRecorder permission not granted or unsupported, will use sample fallback.");
+        }
+
+        micInterval = setInterval(() => {
+          micCount++;
+          counter.textContent = `0:0${micCount}`;
+          if (micCount >= 4) {
+            togglePhoneMic();
+          }
+        }, 1000);
+      } else {
+        isRecordingMic = false;
+        clearInterval(micInterval);
+        svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />';
+        pulse.classList.add('hidden');
+        pulse.classList.remove('flex');
+
+        // Stop recorder and send to /api/stt
+        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+          mediaRecorder.stop();
+          mediaRecorder.onstop = async () => {
+            const blob = new Blob(audioChunks, { type: 'audio/wav' });
+            const formData = new FormData();
+            formData.append('audio', blob, 'call_record.wav');
+
+            try {
+              const res = await fetch('/api/stt', { method: 'POST', body: formData });
+              if (res.ok) {
+                const data = await res.json();
+                if (data.transcript) {
+                  document.getElementById('user-input-box').value = data.transcript;
+                  analyzeCurrentMessage();
+                  return;
+                }
+              }
+            } catch (err) {}
+            loadSample('digital_arrest');
+          };
+        } else {
+          loadSample('digital_arrest');
+        }
+      }
+    }
+
+    function handlePhotoUpload(e) {
+      if (e.target.files && e.target.files[0]) {
+        document.getElementById('photo-loaded-tag').classList.remove('hidden');
+        loadSample('sbi_kyc');
+      }
+    }
+
+    function shareOnWhatsApp() {
+      const d = appDict[appLanguage] || appDict['en'];
+      const text = document.getElementById('card-preview-text').textContent || d.scams[currentSample].wa;
+      const msg = encodeURIComponent(
+        `*${d.brandName} — ${d.tagline}*\n\n` +
+        `${text}\n\n` +
+        `National Cyber Crime Helpline: 1930`
+      );
+      window.open(`https://api.whatsapp.com/send?text=${msg}`, '_blank');
+    }
+
+    function saveKavach() {
+      const name = document.getElementById('kavach-edit-name').value.trim();
+      const phone = document.getElementById('kavach-edit-phone').value.trim();
+      if (name) guardian.name = name;
+      if (phone) guardian.phone = phone;
+
+      document.getElementById('kavach-display-name').textContent = guardian.name;
+      document.getElementById('kavach-display-phone').textContent = guardian.phone;
+
+      alert(`Guardian saved: ${guardian.name} (${guardian.phone}).`);
+    }
+
+    function sendTestKavachAlert() {
+      const d = appDict[appLanguage] || appDict['en'];
+      const msg = encodeURIComponent(
+        `*Kavach Alert (${d.brandName})*\n\n` +
+        `Hello ${guardian.name}, a suspicious scam message was scanned on this phone.\n` +
+        `Please call immediately to ensure no funds are transferred.\n\n` +
+        `Helpline: 1930`
+      );
+      window.open(`https://api.whatsapp.com/send?phone=${guardian.phone.replace(/[^0-9]/g, '')}&text=${msg}`, '_blank');
+    }
+
+    function renderQuizCard() {
+      const list = quizQuestions[appLanguage] || quizQuestions['en'];
+      const q = list[quizIndex];
+      document.getElementById('quiz-q-progress').textContent = `Scenario ${quizIndex + 1} of ${list.length}`;
+      document.getElementById('quiz-sms-content').textContent = q.text;
+      document.getElementById('quiz-feedback-box').classList.add('hidden');
+      document.getElementById('quiz-next-btn').classList.add('hidden');
+      document.getElementById('quiz-buttons-group').classList.remove('hidden');
+    }
+
+    function handleQuizPick(userSaidScam) {
+      const list = quizQuestions[appLanguage] || quizQuestions['en'];
+      const q = list[quizIndex];
+      const isCorrect = userSaidScam === q.isScam;
+      const box = document.getElementById('quiz-feedback-box');
+
+      if (isCorrect) {
+        quizScore++;
+        document.getElementById('quiz-score-val').textContent = quizScore;
+        box.className = "p-3 rounded-xl text-[11px] font-semibold bg-emerald-950/80 border border-emerald-500/40 text-emerald-300";
+        box.innerHTML = `<strong>Correct Verdict:</strong> ${q.reason}`;
+      } else {
+        box.className = "p-3 rounded-xl text-[11px] font-semibold bg-rose-950/80 border border-rose-500/40 text-rose-300";
+        box.innerHTML = `<strong>Incorrect:</strong> ${q.reason}`;
+      }
+
+      box.classList.remove('hidden');
+      document.getElementById('quiz-buttons-group').classList.add('hidden');
+      document.getElementById('quiz-next-btn').classList.remove('hidden');
+    }
+
+    function nextQuizCard() {
+      const list = quizQuestions[appLanguage] || quizQuestions['en'];
+      quizIndex++;
+      if (quizIndex < list.length) {
+        renderQuizCard();
+      } else {
+        alert(`Quiz Complete! Score: ${quizScore}/${list.length}`);
+        quizIndex = 0;
+        quizScore = 0;
+        document.getElementById('quiz-score-val').textContent = "0";
+        renderQuizCard();
+      }
+    }
+
+    // Initial Startup
+    applyLanguage('en');
+    triggerLoadingScreen();
+  </script>
+</body>
+</html>
